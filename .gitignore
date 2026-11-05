@@ -1,0 +1,22 @@
+# Licensed Bureau van Dijk / Orbis data must never be committed
+data/orbis/*
+!data/orbis/README.md
+*.xml
+deals_min*
+deals_raw*
+panel_*.csv
+mna_gravity_panel*
+gravity_panel*
+sector_dummies*
+M&A/
+
+# Generated locally
+data/synthetic/
+data/raw/
+results/synthetic/
+results/orbis/
+__pycache__/
+*.pyc
+
+# One-off assembly script
+tools_assemble.py

@@ -1,0 +1,10 @@
+file,url,bytes,retrieved
+oecd_msti_all.csv,"https://sdmx.oecd.org/public/rest/data/OECD.STI.STP,DSD_MSTI@DF_MSTI,/.A......?startPeriod=2000&dimensionAtObservation=AllDimensions",33759683,2026-11-05T13:52:36
+oecd_daf_inv_flows.xml,https://sdmx.oecd.org/public/rest/dataflow/OECD.DAF.INV/all?detail=allstubs,8137,2026-11-05T13:52:53
+wdi_gdp.csv,https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?source=2,176175,2026-11-05T13:53:00
+wdi_pop.csv,https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?source=2,125138,2026-11-05T13:53:07
+wdi_rd.csv,https://api.worldbank.org/v2/country/all/indicator/GB.XPD.RSDV.GD.ZS?source=2,100415,2026-11-05T13:53:09
+wdi_gdpcap.csv,https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?source=2,179238,2026-11-05T13:53:11
+wgi_pv.csv,https://api.worldbank.org/v2/country/all/indicator/GOV_WGI_PV.EST?source=3,108488,2026-11-05T13:54:39
+wgi_rq.csv,https://api.worldbank.org/v2/country/all/indicator/GOV_WGI_RQ.EST?source=3,107988,2026-11-05T13:54:40
+wgi_rl.csv,https://api.worldbank.org/v2/country/all/indicator/GOV_WGI_RL.EST?source=3,109255,2026-11-05T13:54:41
