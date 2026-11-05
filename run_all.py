@@ -26,6 +26,7 @@ def run(*args):
 
 if data == "synthetic":
     run("make_synthetic_deals.py")
+    run("test_recovery.py")
 run("01_reproduce.py")
 run("02_ri_placebo.py", "--design", "iid", "--reps", str(a.reps), "--workers", str(a.workers))
 run("02_ri_placebo.py", "--design", "dyadshare", "--reps", str(a.block_reps), "--workers", str(a.workers))
