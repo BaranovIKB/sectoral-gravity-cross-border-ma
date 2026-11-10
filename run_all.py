@@ -32,6 +32,10 @@ run("02_ri_placebo.py", "--design", "iid", "--reps", str(a.reps), "--workers", s
 run("02_ri_placebo.py", "--design", "dyadshare", "--reps", str(a.block_reps), "--workers", str(a.workers))
 run("05_ri_summary.py")
 run("04_new_specs.py")
+if a.reps >= 2000:  # patent-quality placebo (Table 5-19): twelve specifications per draw, too slow for the fast setting
+    run("20_ri_patent_quality.py", "--design", "iid", "--reps", str(a.reps), "--workers", str(a.workers))
+    run("20_ri_patent_quality.py", "--design", "dyadshare", "--reps", str(a.block_reps), "--workers", str(a.workers))
+    run("20_ri_patent_quality.py", "--summary")
 run("06_figures.py")
 if data == "orbis":
     run("check_against_thesis.py")

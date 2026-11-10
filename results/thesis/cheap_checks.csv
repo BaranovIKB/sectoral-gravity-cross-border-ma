@@ -1,0 +1,59 @@
+check,spec,fe,stat,value,p,N
+top1,baseline,year,joint_wald,52.15299375560433,4.2289421414849336e-08,18672.0
+top1,baseline,year,ln_gdp_d,-0.360548778500105,6.943432877060118e-05,18672.0
+top1,baseline,year,ln_dist,0.160116452006861,0.015608370563489071,18672.0
+top1,baseline,year,patents_d_l1,1.2484579592800505e-06,0.0001458779830434409,18672.0
+top1,baseline,year,patents_o_l1,-2.8474386526866835e-07,0.31237129704998257,18672.0
+top1,baseline,country,joint_wald,44.842573721375175,9.866254950231499e-07,18666.0
+top1,baseline,country,ln_gdp_d,0.16349950893996085,0.7854537141129756,18666.0
+top1,baseline,country,ln_dist,0.1497685647643795,0.023386731820852047,18666.0
+top1,baseline,country,patents_d_l1,1.3071956047278839e-06,0.044379150008925894,18666.0
+top1,baseline,country,patents_o_l1,3.0737596053421183e-06,0.007792125664547678,18666.0
+top1,baseline,pair,joint_wald,32.05536476833123,9.10386824184927e-05,17379.0
+top1,baseline,pair,ln_gdp_d,0.10504156785683356,0.8530743479710956,17379.0
+top1,baseline,pair,patents_d_l1,1.436892900152879e-06,0.020869726154129076,17379.0
+top1,baseline,pair,patents_o_l1,2.8000918356308657e-06,0.014429719365160132,17379.0
+top1,without top 1% of cells,year,joint_wald,48.11892773010149,2.426622691937277e-07,18341.0
+top1,without top 1% of cells,year,ln_gdp_d,-0.07289251685503904,0.26136392635915406,18341.0
+top1,without top 1% of cells,year,ln_dist,0.037223093685088846,0.5383425128968717,18341.0
+top1,without top 1% of cells,year,patents_d_l1,1.1956847988218432e-06,2.251748194503911e-05,18341.0
+top1,without top 1% of cells,year,patents_o_l1,-5.560818296956329e-07,0.024145836788954655,18341.0
+top1,without top 1% of cells,country,joint_wald,49.98646183690915,1.0835707456407732e-07,18335.0
+top1,without top 1% of cells,country,ln_gdp_d,-0.34036512056171275,0.3139662024004475,18335.0
+top1,without top 1% of cells,country,ln_dist,0.017988015341598853,0.7214994567652497,18335.0
+top1,without top 1% of cells,country,patents_d_l1,2.0700529244469456e-06,6.8099967192036814e-06,18335.0
+top1,without top 1% of cells,country,patents_o_l1,2.47988957640206e-06,0.001397010525247211,18335.0
+top1,without top 1% of cells,pair,joint_wald,79.37481171819935,6.531404278278856e-14,17044.0
+top1,without top 1% of cells,pair,ln_gdp_d,-0.33253763319072294,0.32615648936965647,17044.0
+top1,without top 1% of cells,pair,patents_d_l1,2.691242885089009e-06,4.4967185530708775e-10,17044.0
+top1,without top 1% of cells,pair,patents_o_l1,2.530139888777711e-06,0.0021071665232319514,17044.0
+subsample,Control deals minus Minority deals,year,ln_gdp_d,-0.2821176278152646,0.08992861344403903,
+subsample,Control deals minus Minority deals,year,ln_dist,0.202831035135765,0.1398864992151021,
+subsample,Control deals minus Minority deals,year,patents_d_l1,-9.6464329816321e-07,0.09333073003093673,
+subsample,Control deals minus Minority deals,country,ln_gdp_d,-0.6055874344948997,0.5991860246392104,
+subsample,Control deals minus Minority deals,country,ln_dist,0.1228962563098765,0.35438336448201213,
+subsample,Control deals minus Minority deals,country,patents_d_l1,-1.1657703328674332e-06,0.4367290964216535,
+subsample,Target above median income minus Target below median income,year,ln_gdp_d,0.14375302418524888,0.47213866584801056,
+subsample,Target above median income minus Target below median income,year,ln_dist,-0.15826129794278182,0.5090879214555877,
+subsample,Target above median income minus Target below median income,year,patents_d_l1,-8.305366151431587e-07,0.4839192875952092,
+subsample,Target above median income minus Target below median income,country,ln_gdp_d,1.0847365277081669,0.32137779018413104,
+subsample,Target above median income minus Target below median income,country,ln_dist,0.26335653370721057,0.421803818106385,
+subsample,Target above median income minus Target below median income,country,patents_d_l1,-3.1797877214900355e-06,0.14992420906733925,
+subsample,Acquirer above median income minus Acquirer below median income,year,ln_gdp_d,0.12362100389393799,0.4407091211157269,
+subsample,Acquirer above median income minus Acquirer below median income,year,ln_dist,0.14833966565773601,0.4895475683030799,
+subsample,Acquirer above median income minus Acquirer below median income,year,patents_d_l1,-1.223571667523666e-06,0.11669166354470929,
+subsample,Acquirer above median income minus Acquirer below median income,country,ln_gdp_d,-0.4436931811670396,0.7470190880378518,
+subsample,Acquirer above median income minus Acquirer below median income,country,ln_dist,-0.44232314043433496,0.15710992355732745,
+subsample,Acquirer above median income minus Acquirer below median income,country,patents_d_l1,-1.863024893670441e-06,0.2517262015750963,
+subsample,2001-2010 minus 2011-2021,year,ln_gdp_d,0.07605528975933357,0.6911118548204092,
+subsample,2001-2010 minus 2011-2021,year,ln_dist,0.16754954265931749,0.16159065922847038,
+subsample,2001-2010 minus 2011-2021,year,patents_d_l1,-2.844577132276666e-07,0.8019265961817331,
+subsample,2001-2010 minus 2011-2021,country,ln_gdp_d,1.6788660933542803,0.2691263377264924,
+subsample,2001-2010 minus 2011-2021,country,ln_dist,0.0780408234253606,0.556866384936183,
+subsample,2001-2010 minus 2011-2021,country,patents_d_l1,-3.7505705104924164e-06,0.3558908567362862,
+real_gdp,current USD,year,ln_gdp_d,-0.0031215068602253814,0.8696849459066647,13047.0
+real_gdp,current USD,country,ln_gdp_d,0.35340020852221565,5.7238558343275514e-05,13047.0
+real_gdp,current USD,pair,ln_gdp_d,0.33387557710427634,0.00010603875006731656,12021.0
+real_gdp,constant 2015 USD,year,ln_gdp_d,-0.00290109918302834,0.8763442629042588,13047.0
+real_gdp,constant 2015 USD,country,ln_gdp_d,0.9242247812659544,7.154181402846405e-08,13047.0
+real_gdp,constant 2015 USD,pair,ln_gdp_d,0.8487788080914895,8.198243071078082e-07,12021.0

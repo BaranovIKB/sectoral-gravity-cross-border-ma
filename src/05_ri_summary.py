@@ -35,7 +35,7 @@ def line(design, B, block, name, ob, nominal, col):
                 mc_se=np.sqrt(p * (1 - p) / N), ci_lo=lo, ci_hi=hi, placebo_p95=float(np.quantile(np.abs(x), .95)))
 
 
-rows, size = [], []
+rows, size, size_coef = [], [], []
 for design in ("iid", "dyadshare"):
     f = RESULTS / "ri" / f"ri_{design}.csv"
     if not f.exists():
@@ -50,6 +50,9 @@ for design in ("iid", "dyadshare"):
         rej = (B[f"{block}_wald_p"] < .05).mean(); k = len(B)
         size.append(dict(design=design, block=block, reject_5pct=rej, mc_se=np.sqrt(rej * (1 - rej) / k), N=k,
                          median_N=B[f"{block}_N"].median(), wald_p95=B[f"{block}_wald"].quantile(.95)))
+        for v in o["coef"]:
+            x = B[f"{block}_{v}_p"].dropna()
+            size_coef.append(dict(design=design, block=block, stat=v, reject_5pct=(x < .05).mean(), N=len(x)))
     rows.append(line(design, B, "year", "pat_gdp_d", obs_pg, obs_pg_p, "year_pat_gdp_d"))
     for k, msh in share.items():
         co, pv = msh.coef(), msh.pvalue()
@@ -59,5 +62,6 @@ for design in ("iid", "dyadshare"):
                 rows.append(line(design, B, f"share_{k}", v, float(co[v]), float(pv[v]), col))
 T = pd.DataFrame(rows); S = pd.DataFrame(size)
 T.to_csv(RESULTS / "ri_table.csv", index=False); S.to_csv(RESULTS / "ri_size.csv", index=False)
+pd.DataFrame(size_coef).to_csv(RESULTS / "ri_size_coef.csv", index=False)
 pd.set_option("display.width", 200)
 print(S.to_string()); print(T.to_string(float_format=lambda x: f"{x:.5g}"))

@@ -51,6 +51,7 @@ SERIES = {
     "wdi_pop": ("SP.POP.TOTL", 2),
     "wdi_rd": ("GB.XPD.RSDV.GD.ZS", 2),  # R&D % GDP, UNESCO UIS via the World Bank
     "wdi_gdpcap": ("NY.GDP.PCAP.CD", 2),
+    "wdi_gdp_real": ("NY.GDP.MKTP.KD", 2),  # constant 2015 USD, for 22_cheap_checks.py
 }
 for name, (code, src) in SERIES.items():
     if (DATA / f"{name}.csv").exists():

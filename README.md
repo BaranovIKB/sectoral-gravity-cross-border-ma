@@ -45,6 +45,10 @@ src/                 analysis scripts
   04_new_specs.py           extended tests (Tables 5-18 to 5-24)
   05_ri_summary.py          RI p-values, Monte Carlo errors, size distortion (Table 5-6)
   06_figures.py             Figures 3-7 and 5-3
+  20_ri_patent_quality.py   randomisation inference for Table 5-19; run_all.py runs it only with --reps 2000 or more
+  21_ri_nochina.py          randomisation inference without China (Sections 5.2, 6.1)
+  22_cheap_checks.py        largest-cells, subsample-difference and constant-price GDP checks
+  15_all_pairs.py to 18_leave_one_out_joint.py   full country-pair grid with zeros and its placebo (Section 5.4)
   test_recovery.py          known-parameter test on the synthetic deals
   verify_published_ri.py    level 1 check
   check_against_thesis.py   level 3 check
@@ -52,13 +56,28 @@ data/public/         public series, with sources in SOURCES.csv
 data/orbis/          empty; column list for licensed users
 results/thesis/      statistics reported in the thesis and placebo draws; no deal-level or cell-level data
 legacy/              Main.py and revision_specs.py, which built the original panels from the Orbis XML
+tools/               licensed-data check and its pre-commit hook installer
 ```
 
 `legacy/Main.py` still holds old 2SLS and Heckman routines that the thesis does not use. It is kept unchanged as a record of how the panels were built. It is not needed for levels 1 and 2.
 
+## Licensed data: what is not published
+
+The Orbis M&A licence (Bureau van Dijk, Moody's) does not allow redistribution of its records or of files built from them. None of the following is in this repository or its history:
+
+- the deal extract (`deals_min.csv`, `deals_raw_full.csv.gz`) and the Orbis XML;
+- the pair-year panels built from it (`panel_*.csv`), including cell-level deal values and counts;
+- any deal identifier, company name or deal-level field.
+
+What is published instead: public country-level and pair-level series (`data/public/`), estimated coefficients, standard errors, p-values and sample sizes (`results/thesis/`), and the placebo draws, which hold one coefficient vector per replication and no data. These are the statistics the thesis itself reports. `.gitignore` excludes the licensed files, and `tools/check_no_licensed_data.py` refuses a commit that contains a deal-extract or panel file name, an Orbis field name in a table header, or any file in `data/orbis/` other than its README. Run `python tools/install_hook.py` once after cloning to make it a pre-commit hook.
+
 ## Data sources
 
 CEPII Gravity V202211; OECD Main Science and Technology Indicators; OECD FDI Regulatory Restrictiveness Index; WIPO IP Statistics Data Center; World Bank World Development Indicators and Worldwide Governance Indicators. Each provider's terms apply to its data. `data/public/SOURCES.csv` records URLs and download dates for the series fetched by script.
+
+## Licence
+
+The code is under the MIT licence (`LICENSE`). The public data keep the terms of their publishers listed above. No Orbis data are included or licensed.
 
 ## Software
 
